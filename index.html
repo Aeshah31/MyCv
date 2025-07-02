@@ -1,15 +1,140 @@
-<HTML>
 
-<HEAD>
 
-<TITLE>MyCv</TITLE>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السيرة الذاتية - Aeshah31</title>
 
-</HEAD>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
-<BODY>
+  <style>
+    /* ألوان وثيم */
+    :root {
+      --primary: #2a9d8f;
+      --secondary: #264653;
+      --bg-light: #ffffff;
+      --bg-dark: #121212;
+      --text-light: #000000;
+      --text-dark: #f0f0f0;
+    }
 
-<H1 STYLE="COLOR:GReen;
-front-size;190px;">Aeshah31<H1>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s;
+    }
 
-</BODY>
-</HTML>
+    header, footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode header, body.dark-mode footer {
+      background-color: var(--secondary);
+    }
+
+    .mode-btn {
+      margin: 15px;
+      padding: 8px 16px;
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+  <!-- رأس الصفحة -->
+  <header>
+    <h1>السيرة الذاتية</h1>
+    <p>إعداد: Aeshah31</p>
+    <nav>
+      <a href="#about">عنّي</a>
+      <a href="#education">التعليم</a>
+      <a href="#skills">المهارات</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <button class="mode-btn" onclick="toggleMode()">تبديل الوضع (Light / Dark)</button>
+
+  <!-- عني -->
+  <section id="about">
+    <h2>عنّي</h2>
+    <p>أنا Aeshah، طالبة في تخصص علوم الحاسب، مهتمة بتطوير المواقع وتحليل البيانات، وأسعى لصنع تأثير في مجال التقنية.</p>
+  </section>
+
+  <!-- التعليم -->
+  <section id="education">
+    <h2>التعليم</h2>
+    <p>جامعة القصيم - بكالوريوس علوم الحاسب - متوقعة التخرج 2025</p>
+  </section>
+
+  <!-- المهارات -->
+  <section id="skills">
+    <h2>المهارات</h2>
+    <ul>
+      <li>HTML, CSS</li>
+      <li>JavaScript, Python</li>
+      <li>Git & GitHub</li>
+      <li>تحليل البيانات وواجهات المستخدم</li>
+    </ul>
+  </section>
+
+  <!-- تواصل -->
+  <section id="contact">
+    <h2>التواصل</h2>
+    <p>البريد: aeshah@example.com</p>
+    <p>رقم الجوال: 05XXXXXXXX</p>
+  </section>
+
+  <!-- تذييل -->
+  <footer>
+    <p>© 2025 Aeshah31 - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
